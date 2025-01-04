@@ -3,23 +3,20 @@
 layout: home
 
 hero:
-  name: "Minhas Anotações"
-  text: "Um Grupo de Notas Para Consultar"
-  tagline: Practice makes perfect
+  name: "Notas Técnicas"
+  text: "Agrupador de Notas para Consulta"
+  tagline: Rápida, Fácil e descomplicada
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Comece por aqui
+      link: /instrucoes-iniciais
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: BACKEND
+    details: Anotações focadas em programação backend.
+  - title: FRONTEND
+    details: Anotações sobre aprendizado de frontend.
+  - title: GIT
+    details: Anotações com práticas sobre uso de git. 
 ---
 
