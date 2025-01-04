@@ -17,6 +17,13 @@ export default defineConfig({
         items: [
           { text: 'Comece por aqui', link: '/instrucoes-iniciais' }
         ]
+      },
+      {
+        text: 'Configuração',
+        collapsed: false,
+        items: [
+          { text: 'JDK no Linux', link: '/jdk-linux' }
+        ]
       }
     ],
 
