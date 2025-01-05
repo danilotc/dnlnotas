@@ -43,8 +43,9 @@ sudo update-alternatives --config java
 sudo nano ~/.bashrc
 ```
 
-> [!TIP]
-> 📌 Neste caso o comando `nano` pode ser substituído pelo editor de arquivos de sua preferência.
+::: tip Observação
+📌 Neste caso o comando `nano` pode ser substituído pelo editor de arquivos de sua preferência.
+:::
 
 4. Copie o código abaixo no final do arquivo. Substitua `...` pelo caminho copiado no passo 2 sem o trecho final `/bin/java`. Em seguida, salve o arquivo.
 
