@@ -81,7 +81,7 @@ export PATH=$PATH:$JAVA_HOME
 
 ![Configurando JAVA_HOME](/imagem2.png)
 
-::: tip
+::: tip Observação
 No endereço `JAVA_HOME` remova o final `/bin/java` deixando apenas o caminho da pasta jdk
 :::
 
