@@ -15,20 +15,33 @@ export default defineConfig({
       { text: 'Início', link: '/' }
     ],
 
-    sidebar: [
-      {
-        text: 'Introdução',
-        items: [
-          { text: 'Comece por aqui', link: '/instrucoes-iniciais' },
-          {
-            text: 'Configuração',
-            items: [
-              { text: 'JDK no Linux', link: '/jdk-linux' }
-            ]
-          }
-        ]
-      }
-    ],
+    /**
+     * Modificado para multiplas sidebars baseado em grupos de arquivos
+     * ----------------------------------------------------------------
+     */
+    sidebar: {
+      // raiz: todos os arquivos .md que estiverem dentro de 'docs'
+      '/': [
+        {
+          text: 'Introdução',
+          items: [
+            { text: 'Comece por aqui', link: 'instrucoes-iniciais' },
+            { text: 'JDK no Linux', link: '/config/jdk-linux' }
+          ]
+        }
+      ],
+      // config: todos os arquivos .md que estiverem dentro de 'config'
+      '/config/': [
+        {
+          text: 'Configuração',
+          base: '/config/',
+          items: [
+            { text: 'JDK no Linux', link: 'jdk-linux' },
+            { text: 'Icones no VitePress', link: 'icone' }
+          ]
+        }
+      ]
+    },
 
     /**
      * Este trecho mostra icones ao lado direito do menu principal
