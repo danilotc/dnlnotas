@@ -3,20 +3,56 @@
 layout: home
 
 hero:
-  name: "Notas Técnicas"
-  text: "Agrupador de Notas para Consulta"
-  tagline: Rápida, Fácil e descomplicada
+  name: "Minhas Anotações"
+  text: "Um Grupo de Notas para Consulta"
+  tagline: Java | JavaScript | SQL | Git | Linux | e mais...
   actions:
     - theme: brand
-      text: Comece por aqui
-      link: /instrucoes-iniciais
+      text: Começar instalando JDK
+      link: /config/jdk-linux
+  image:
+    src: /image-hero.png
+    alt: VitePress
 
 features:
-  - title: BACKEND
-    details: Anotações focadas em programação backend.
-  - title: FRONTEND
-    details: Anotações sobre aprendizado de frontend.
-  - title: GIT
-    details: Anotações com práticas sobre uso de git. 
+  - icon: 🛠
+    title: Back-end
+    details: Lembrar comandos que podem fazer a diferença nos estudos.
+
+  - icon: 🖌
+    title: Front-end
+    details: Para lembrar detalhes da arte de fazer telas bonitas e interativas.
+
+  - icon: 💡
+    title: Git
+    details: Caso esquecer aquele comando que pode salvar um projeto.
+
+  - icon: 🐧
+    title: Linux
+    details: Nunca mais esquecer comandos importentes que podem salvar.
 ---
+
+<!--
+<style>
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
+  --vp-home-hero-image-filter: blur(44px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(68px);
+  }
+}
+</style>
+-->
 

@@ -1,8 +1,8 @@
-# Exemplos de API
+# Icone em bloco de código
 
-Este é um exemplo de api
+Os blocos de código podem conter abas e nelas ter o indicativo de qual tecnologia aquele trecho de código representa, conforme documentação em [VitePress Plugin Group Icons](https://vpgi.vercel.app).
 
-## Icone em bloco de código
+A configuração também pode ser lida em [NPM](https://www.npmjs.com/package/vitepress-plugin-group-icons).
 
 ::: code-group
 
@@ -16,7 +16,7 @@ public class Hello {
 
 :::
 
-## Aplicando plugin code icons do vitepress
+## Configurar *icons* no vitepress
 
 - **Passo 1:** Instalar o plugin que irá fazer os ícones aparecerem nas abas de cada código nos blocos.
 

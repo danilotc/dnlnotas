@@ -2,17 +2,18 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Notas Técnicas",
+  title: "Minhas Anotações",
   description: "Um grupo de informações",
 
   // adiciona imagem favicon na aba do navegador
-  head: [['link', {rel: 'icon', href: '/icon.png'}]],
+  head: [['link', {rel: 'icon', href: '/icone-menu.png'}]],
 
   themeConfig: {
-    logo: '/icon.png',
+    logo: '/icone-menu.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Início', link: '/' }
+      { text: 'Início', link: '/' },
+      { text: 'Configuração', link: '/config/jdk-linux' }
     ],
 
     /**
@@ -25,8 +26,7 @@ export default defineConfig({
         {
           text: 'Introdução',
           items: [
-            { text: 'Comece por aqui', link: '/instrucoes-iniciais' },
-            { text: 'JDK no Linux', link: '/config/jdk-linux' }
+            { text: 'Comece por aqui', link: '/instrucoes-iniciais' }
           ]
         }
       ],
