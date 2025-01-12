@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { groupIconMdPlugin, groupIconVitePlugin, localIconLoader } from 'vitepress-plugin-group-icons'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -75,5 +76,21 @@ export default defineConfig({
     outline: {
       label: 'Nesta página'
     }
+  },
+
+  markdown: {
+    config(md) {
+      md.use(groupIconMdPlugin)
+    },
+  },
+  vite: {
+    plugins: [
+      groupIconVitePlugin({
+        customIcon: {
+          // o icone do java não funciona por padrão e por isso precisa ser customizado
+          '.java': 'vscode-icons:file-type-java'
+        }
+      })
+    ],
   }
 })
