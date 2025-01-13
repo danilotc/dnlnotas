@@ -1,4 +1,4 @@
-# Icone em bloco de código
+# Configurando icone em bloco de código
 
 Os blocos de código podem conter abas e nelas ter o indicativo de qual tecnologia aquele trecho de código representa, conforme documentação em [VitePress Plugin Group Icons](https://vpgi.vercel.app).
 
@@ -14,19 +14,31 @@ public class Hello {
 }
 ```
 
+```js [arquivo.js]
+if (idade < 18) {
+  console.log("É menor de idade")
+} else {
+  console.log("É maior de idade")
+}
+```
+
+```sh [npm]
+npm install algum-pacote
+```
+
 :::
 
-## Configurar *icons* no vitepress
+## Bloco de códogi com ícones
 
-- **Passo 1:** Instalar o plugin que irá fazer os ícones aparecerem nas abas de cada código nos blocos.
+- **Passo 1:** Instalar o plugin que irá colocar um ícone nas abas de cada bloco código:
 
 ```sh [npm]
 npm install vitepress-plugin-group-icons
 ```
 
-Neste momento uma dependência será instalada, veja no arquivo `package.json`.
+Neste momento uma dependência será instalada no arquivo `package.json`
 
-```json {9-12} [package.json]
+```json {10-12} [package.json]
 {
   "devDependencies": {
     "vitepress": "^1.5.0"
@@ -42,7 +54,7 @@ Neste momento uma dependência será instalada, veja no arquivo `package.json`.
 }
 ```
 
-- **Passo 2:** Configurar o arquivo `config.ts` com as seguintes alterações.
+- **Passo 2:** Configurar o arquivo `config.ts`:
 
 ```ts {2,7,12} [.vitepress/config.ts]
 import { defineConfig } from 'vitepress'
@@ -62,7 +74,7 @@ export default defineConfig({
 })
 ```
 
-Dependendo de como o projeto foi criado será necessário criar a pasta `theme` com arquivo `index.ts` para colar este trecho.
+Dependendo de como o projeto foi iniciado, criar a pasta `theme` com arquivo `index.ts` e colar este código:
 
 ```ts {2} [.vitepress/theme/index.ts]
 import Theme from 'vitepress/theme'
@@ -70,17 +82,13 @@ import 'virtual:group-icons.css'
 
 export default Theme
 ```
-- **Passo 3:** Customizar icones. Quando usar icones da passa `assets` é necessário incluir `localIconLoader` na importação e usar, como mostrado na linha 5 e 19.
+- **Passo 3:** Para usar ícones customizados é necessário incluir `localIconLoader` na linha 2 para importar e usar, conforme o trecho destacado na linha 15.
 
 Veja mais em [Custom Icons](https://vpgi.vercel.app/features.html#custom-icons).
 
-```ts:line-numbers{5,19}
+```ts:line-numbers {2,15}
 import { defineConfig } from 'vitepress'
-import { 
-  groupIconMdPlugin, 
-  groupIconVitePlugin, 
-  localIconLoader 
-} from 'vitepress-plugin-group-icons'
+import { groupIconMdPlugin, groupIconVitePlugin, localIconLoader } from 'vitepress-plugin-group-icons'
 
 export default defineConfig({
   markdown: {
@@ -93,7 +101,7 @@ export default defineConfig({
       groupIconVitePlugin({
         customIcon: {
           // 'java': 'vscode-icons:file-type-java'
-          'java': localIconLoader(import.meta.url, '../assets/java-icon.svg')
+          'java': localIconLoader(import.meta.url, '../public/java-icon.svg')
         }
       })
     ],
@@ -101,6 +109,7 @@ export default defineConfig({
 })
 ```
 
+O resultado da configuração é o ícone do `Java` aparecendo na aba, indicando que o trecho de código está escrito na linhagem Java:
 ::: code-group
 
 ``` [File.java]

@@ -119,8 +119,8 @@ export default defineConfig({
     plugins: [
       groupIconVitePlugin({
         customIcon: {
-          // o icone do java não funciona por padrão e por isso precisa ser customizado
-          '.java': 'vscode-icons:file-type-java'
+          // '.java': 'vscode-icons:file-type-java',
+          'java': localIconLoader(import.meta.url, '../public/java-icon.svg')
         }
       })
     ],
