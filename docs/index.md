@@ -5,11 +5,11 @@ layout: home
 hero:
   name: "Minhas Anotações"
   text: "Um Grupo de Notas para Consulta"
-  tagline: Java | JavaScript | SQL | Git | Linux | e mais...
+  tagline: Java | SpringBoot | SQL | Git | Linux | e mais...
   actions:
     - theme: brand
       text: Começar instalando JDK
-      link: /config/jdk-linux
+      link: /content/java/jdk-no-linux
   image:
     src: /image-hero.png
     alt: VitePress

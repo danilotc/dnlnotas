@@ -1,5 +1,5 @@
 ---
-outline: deep
+outline: [2, 3]
 ---
 
 # Configurar JDK no Linux
@@ -123,9 +123,6 @@ Veja como fica o resultado dos passos acima em matéria de arquivos.
 
 ---
 
-Referências
-- [Documentação Oficial](https://docs.oracle.com/javase/8/docs/)
-- [API](https://docs.oracle.com/javase/8/docs/api/)
-
-Créditos
-- [DevSuperior](https://www.youtube.com/watch?v=jARiy3DZdwg)
+##### Referências
+- [DevSuperior: Como Instalar Java JDK no Ubuntu Linux](https://www.youtube.com/watch?v=jARiy3DZdwg)
+- [Webmundi: Como Instalar Java JDK no Linux Ubuntu](https://www.youtube.com/watch?v=Kn87QF1mEcY&list=PLZun-PtGBZCu1V6IVGihHrAdCHgCu73Mr&index=4)

@@ -3,7 +3,7 @@ import { groupIconMdPlugin, groupIconVitePlugin, localIconLoader } from 'vitepre
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Minhas Anotações",
+  title: "MyNotes",
   description: "Um grupo de informações",
 
   // adiciona imagem favicon na aba do navegador
@@ -13,8 +13,14 @@ export default defineConfig({
     logo: '/icone-menu.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Início', link: '/' },
-      { text: 'Configuração', link: '/config/jdk-linux' }
+      { text: 'Notas', link: '/content/' },
+      {
+        text: 'Docs',
+        items: [
+          { text: 'Java SE', link: 'https://docs.oracle.com/en/java/javase', target: '_black', rel: 'Java SE Docs' },
+          { text: 'Spring Boot', link: 'https://spring.io', target: '_black', rel: 'Spring Boot' }
+        ]
+      }
     ],
 
     /**
@@ -22,23 +28,49 @@ export default defineConfig({
      * ----------------------------------------------------------------
      */
     sidebar: {
-      // raiz: todos os arquivos .md que estiverem dentro de 'docs'
-      '/': [
+      '/content/': [
         {
-          text: 'Introdução',
+          text: 'Anotações',
           items: [
-            { text: 'Comece por aqui', link: '/instrucoes-iniciais' }
+            {
+              text: 'Java',
+              collapsed: true,
+              base: '/content/java/',
+              items: [
+                { text: 'Instalar JDK no Linux', link: 'jdk-no-linux' }
+              ]
+            },
+            {
+              text: 'Database',
+              collapsed: true,
+              base: '/content/database/',
+              items: [
+                { text: 'SQL', link: 'sql' }
+              ]
+            },
+            {
+              text: 'Linux',
+              collapsed: true,
+              base: '/content/linux/',
+              items: [
+                { text: 'Instalação', link: 'instalacao' }
+              ]
+            },
+            {
+              text: 'Git',
+              collapsed: true,
+              base: '/content/git/',
+              items: [
+                { text: 'Comandos', link: 'comandos' },
+                { text: 'GUI', link: 'gui' },
+              ]
+            },
           ]
-        }
-      ],
-      // config: todos os arquivos .md que estiverem dentro de 'config'
-      '/config/': [
+        },
         {
           text: 'Configuração',
-          base: '/config/',
           items: [
-            { text: 'JDK no Linux', link: 'jdk-linux' },
-            { text: 'Icones no VitePress', link: 'icone' }
+            { text: 'Icone em bloco de código', link: '/content/icone' }
           ]
         }
       ]
@@ -54,7 +86,7 @@ export default defineConfig({
 
     /**
      * Modifica texto do recurso de paginação do site para
-     *Próxomo e Anterior.
+     * Próxomo e Anterior.
      */
     docFooter: {
       prev: 'Anterior',
