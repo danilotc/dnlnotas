@@ -28,7 +28,7 @@ npm install algum-pacote
 
 :::
 
-## Bloco de códogi com ícones
+## Bloco de código com ícones
 
 - **Passo 1:** Instalar o plugin que irá colocar um ícone nas abas de cada bloco código:
 
