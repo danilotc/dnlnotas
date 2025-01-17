@@ -120,7 +120,8 @@ export default defineConfig({
       groupIconVitePlugin({
         customIcon: {
           // '.java': 'vscode-icons:file-type-java',
-          'java': localIconLoader(import.meta.url, '../public/java-icon.svg')
+          'java': localIconLoader(import.meta.url, '../public/java-icon.svg'),
+          'properties': localIconLoader(import.meta.url, '../public/properties-icon.svg')
         }
       })
     ],
