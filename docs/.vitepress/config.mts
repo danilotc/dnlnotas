@@ -7,10 +7,10 @@ export default defineConfig({
   description: "Um grupo de informações",
 
   // adiciona imagem favicon na aba do navegador
-  head: [['link', {rel: 'icon', href: '/icone-menu.png'}]],
+  head: [['link', {rel: 'icon', href: '/icone-favicon-e-menu-24x24.png'}]],
 
   themeConfig: {
-    logo: '/icone-menu.png',
+    logo: '/icone-favicon-e-menu-24x24.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Notas', link: '/content/' },
